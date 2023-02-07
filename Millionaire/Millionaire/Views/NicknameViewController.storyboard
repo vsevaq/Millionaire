@@ -102,7 +102,7 @@
     </scenes>
     <resources>
         <image name="bgCoins" width="414" height="736"/>
-        <image name="logo" width="201" height="201"/>
+        <image name="logo" width="603" height="603"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
