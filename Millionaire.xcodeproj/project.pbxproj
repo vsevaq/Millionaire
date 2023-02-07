@@ -26,6 +26,8 @@
 		A1E792FF29929F2800FED76C /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E792FC29929F2800FED76C /* GameEngine.swift */; };
 		A1E7930029929F2800FED76C /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E792FD29929F2800FED76C /* GameVC.swift */; };
 		A1E7930129929F2800FED76C /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E792FE29929F2800FED76C /* GameModel.swift */; };
+		FD0CF8092992A69800013201 /* WinOrLoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0CF8082992A69800013201 /* WinOrLoseViewController.swift */; };
+		FD0CF80D2992A7B000013201 /* WinOrLoseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD0CF80C2992A7B000013201 /* WinOrLoseViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		A1E792FC29929F2800FED76C /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		A1E792FD29929F2800FED76C /* GameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 		A1E792FE29929F2800FED76C /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		FD0CF8082992A69800013201 /* WinOrLoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinOrLoseViewController.swift; sourceTree = "<group>"; };
+		FD0CF80C2992A7B000013201 /* WinOrLoseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WinOrLoseViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 				1898BDD72991C21F006CE9DA /* WelcomeViewController.storyboard */,
 				1898BDD92991C24E006CE9DA /* NicknameViewController.storyboard */,
 				A1E792F929929CD400FED76C /* GameViewController.storyboard */,
+				FD0CF80C2992A7B000013201 /* WinOrLoseViewController.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				3327847A298FE04E001760A3 /* ViewController.swift */,
 				184CF814299188D300124773 /* NicknameViewController.swift */,
 				1898BDDB2991C277006CE9DA /* WelcomeViewController.swift */,
+				FD0CF8082992A69800013201 /* WinOrLoseViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -214,6 +220,7 @@
 			files = (
 				184CF81929919CBD00124773 /* Countdown.mp3 in Resources */,
 				A1E792FA29929CD400FED76C /* GameViewController.storyboard in Resources */,
+				FD0CF80D2992A7B000013201 /* WinOrLoseViewController.storyboard in Resources */,
 				184CF81D29919D2300124773 /* Answer accepted.mp3 in Resources */,
 				184CF81F29919D2800124773 /* Right answer.mp3 in Resources */,
 				33278483298FE050001760A3 /* LaunchScreen.storyboard in Resources */,
@@ -235,6 +242,7 @@
 			files = (
 				184CF815299188D300124773 /* NicknameViewController.swift in Sources */,
 				A1E792FF29929F2800FED76C /* GameEngine.swift in Sources */,
+				FD0CF8092992A69800013201 /* WinOrLoseViewController.swift in Sources */,
 				1898BDDC2991C277006CE9DA /* WelcomeViewController.swift in Sources */,
 				3327847B298FE04E001760A3 /* ViewController.swift in Sources */,
 				A1E7930029929F2800FED76C /* GameVC.swift in Sources */,
