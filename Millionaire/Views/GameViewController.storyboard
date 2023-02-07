@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--RulesVC-->
+        <scene sceneID="sOq-1H-LoK">
+            <objects>
+                <viewController id="1O8-bl-p0Q" userLabel="RulesVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bdp-gf-ssx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgBlur" translatesAutoresizingMaskIntoConstraints="NO" id="sCB-v3-zGZ">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVv-qk-Cc6">
+                                <rect key="frame" x="0.0" y="59.000000000000057" width="393" height="912.33333333333348"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJz-EI-fRv">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="3126.6666666666665"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d4-Zl-Zg8">
+                                                <rect key="frame" x="15" y="0.0" width="363" height="3126.6666666666665"/>
+                                                <string key="text">Правила игры “Кто хочет стать миллионером?”
+
+Игра Кто хочет стать миллионером? - это конкурс викторина, в котором участники должны правильно ответить на ряд вопросов с несколькими вариантами ответов, чтобы перейти на следующий уровень. Всего 15 вопросов, каждый вопрос стоит определенной суммы денег, участники не имеют никаких временных ограничений для предоставления ответа. Участники также получают три вида подсказок, чтобы помочь себе, если они застряли на конкретном вопросе.
+
+Вопросы “Кто хочет стать миллионером?” структурированы в соответствии с пятью различными уровнями, причем уровень сложности постепенно увеличивается. Каждый уровень содержит три вопроса.
+
+Вопросы, сгруппированные на одном уровне, будут иметь одинаковую сложность. Например: вопросы 1-3 составляют первый уровень и будут содержать самые простые вопросы. Второй уровень (вопросы 4–6) будет несколько сложнее, за ним следует третий уровень (вопросы 7–9). Четвертый уровень (вопросы 10–12) будет состоять из действительно сложных вопросов, за которыми следует пятый и последний уровень (вопросы 13–15), имеющий самые сложные вопросы в игре.
+
+Важно помнить, что вопросы, составляющие каждый уровень, не обязательно будут относиться к одним и тем же или даже сходным темам, но их общий уровень сложности будет одинаковым. Немаловажно, что уровни вопросов не следует путать с «несгораемыми суммами» или структурой ценностей вопросов, что они собой являют объясняется ниже.
+
+Важно помнить, что вопросы, составляющие каждый уровень, не обязательно будут относиться к одним и тем же или даже сходным темам, но их общий уровень сложности будет одинаковым. Немаловажно, что уровни вопросов не следует путать с «несгораемыми суммами» или структурой ценностей вопросов, что они собой являют объясняется ниже.
+
+Вопрос 1 100 руб.
+Вопрос 2 200 руб.
+Вопрос 3 300 руб.
+Вопрос 4 500 руб.
+Вопрос 5 - 1000 руб. Несгораемая сумма.
+
+Если участники неправильно отвечают на последний вопрос вопрос, то они уходят ни с чем. Если на этот вопрос дан правильный ответ, участникам гарантируется 1000 рублей, даже если дадут неверный ответ до достижения следующей несгораемой суммы в десятом вопросе.
+
+Вопрос 6 2000 руб.
+Вопрос 7 4000 руб.
+Вопрос 8 8000 руб.
+Вопрос 9 16 000 руб.
+Вопрос 10 - 32 000 руб. Несгораемая сумма.
+
+Если участники неправильно ответят на этот вопрос, они уйдут с 1000 рублей. Если на этот вопрос ответили верно, игрокам гарантируется 32 000 рублей, даже если дадут неверный ответ до достижения вопроса 15.
+
+Вопрос 11 64 000 руб.
+Вопрос 12 125 000 руб.
+Вопрос 13 250 000 руб.
+Вопрос 14 500 000 руб.
+Вопрос 15 - 1 000 000 руб.
+
+Подсказки
+
+Участникам разрешается применить три подсказки, которые они могут использовать в любой момент викторины. Каждая из подсказок может быть использована только один раз.
+
+50/50 - исключает два неправильных ответа из множественного выбора, оставляя участнику только один правильный и один неправильный вариант. Это означает, что у него есть шанс 50/50.
+
+Задать вопрос аудитории - залу задают тот же вопрос, что и участнику, и проводится быстрый опрос, чтобы показать их ответы. На диаграмме показывается явное преимущество определенного варианта, эта подсказка может быть чрезвычайно полезной. Участнику дается возможность согласиться с результатами, полученными от аудитории.
+
+Позвоните другу - участникам разрешается сделать 30-секундный звонок другу или члену семьи и спросить, знают ли они ответ на вопрос.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="3000" id="Cr3-Od-OoE"/>
+                                            <constraint firstItem="7d4-Zl-Zg8" firstAttribute="top" secondItem="xJz-EI-fRv" secondAttribute="top" id="JhH-pR-rcP"/>
+                                            <constraint firstItem="7d4-Zl-Zg8" firstAttribute="leading" secondItem="xJz-EI-fRv" secondAttribute="leading" constant="15" id="Vd6-Xk-2Hx"/>
+                                            <constraint firstAttribute="bottom" secondItem="7d4-Zl-Zg8" secondAttribute="bottom" id="jmM-Rh-nyw"/>
+                                            <constraint firstAttribute="trailing" secondItem="7d4-Zl-Zg8" secondAttribute="trailing" constant="15" id="uad-eb-lHD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xJz-EI-fRv" firstAttribute="leading" secondItem="UVv-qk-Cc6" secondAttribute="leading" id="Jyd-Cz-H80"/>
+                                    <constraint firstAttribute="trailing" secondItem="xJz-EI-fRv" secondAttribute="trailing" id="NYr-3Z-mM5"/>
+                                    <constraint firstAttribute="bottom" secondItem="xJz-EI-fRv" secondAttribute="bottom" id="Wgh-iV-Kct"/>
+                                    <constraint firstItem="xJz-EI-fRv" firstAttribute="top" secondItem="UVv-qk-Cc6" secondAttribute="top" id="zHj-01-vDj"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ehw-40-R5J"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UVv-qk-Cc6" firstAttribute="trailing" secondItem="ehw-40-R5J" secondAttribute="trailing" id="2Ks-Hw-DE7"/>
+                            <constraint firstItem="xJz-EI-fRv" firstAttribute="height" secondItem="bdp-gf-ssx" secondAttribute="height" multiplier="3.21888" id="6aE-J6-4zU"/>
+                            <constraint firstItem="xJz-EI-fRv" firstAttribute="width" secondItem="bdp-gf-ssx" secondAttribute="width" id="ABW-ZX-7kS"/>
+                            <constraint firstItem="UVv-qk-Cc6" firstAttribute="top" secondItem="ehw-40-R5J" secondAttribute="top" id="YN9-Hi-Ps4"/>
+                            <constraint firstAttribute="bottom" secondItem="UVv-qk-Cc6" secondAttribute="bottom" id="ejI-jg-fKK"/>
+                            <constraint firstItem="UVv-qk-Cc6" firstAttribute="leading" secondItem="ehw-40-R5J" secondAttribute="leading" id="x30-sZ-vgv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jkp-U2-SHe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JU0-Eh-Gfi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="-441"/>
+        </scene>
+        <!--GameVC-->
+        <scene sceneID="F1t-33-NMY">
+            <objects>
+                <viewController id="rUa-E1-KNZ" userLabel="GameVC" customClass="GameVC" customModule="MillionaireGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GT7-8q-WDX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4z-6u-fmD" userLabel="GameView">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgBlur" translatesAutoresizingMaskIntoConstraints="NO" id="WjE-pI-DVN" userLabel="BackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="iRc-eC-7iR">
+                                        <rect key="frame" x="20" y="111" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="f6Y-k5-pQB"/>
+                                            <constraint firstAttribute="height" constant="100" id="k3M-Qf-9Rb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXv-Fv-VGQ">
+                                        <rect key="frame" x="128" y="111" width="257" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="fYu-Wd-HMW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос №" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGA-Tw-FFT">
+                                        <rect key="frame" x="20" y="219" width="120" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="hLk-Mv-1oG"/>
+                                            <constraint firstAttribute="height" constant="35" id="x8s-tD-yEv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1g-KL-Bbo">
+                                        <rect key="frame" x="265" y="219" width="120" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="ESm-Ns-Z76"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="RrS-X6-sX4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XZl-Y0-NMu">
+                                        <rect key="frame" x="20" y="693" width="353" height="99"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSm-bQ-Wn5">
+                                                <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="99"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Group 28"/>
+                                                <connections>
+                                                    <action selector="FiftyFiftyButton:" destination="rUa-E1-KNZ" eventType="touchUpInside" id="zVE-jg-Gmo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bH8-wq-WfW">
+                                                <rect key="frame" x="117.66666666666666" y="0.0" width="117.66666666666666" height="99"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Group 29"/>
+                                                <connections>
+                                                    <action selector="PeopleHelpButton:" destination="rUa-E1-KNZ" eventType="touchUpInside" id="cM9-4s-9yQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIp-Gd-JSl">
+                                                <rect key="frame" x="235.33333333333334" y="0.0" width="117.66666666666666" height="99"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Group 33"/>
+                                                <connections>
+                                                    <action selector="CallToFriendButton:" destination="rUa-E1-KNZ" eventType="touchUpInside" id="8Js-dJ-rBi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="4F8-NJ-g7T">
+                                        <rect key="frame" x="20" y="311" width="353" height="312"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31I-lx-GFb">
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="40.666666666666664"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Ответ 1">
+                                                    <backgroundConfiguration key="background" image="rectBlue"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="AnswerOneButton:" destination="rUa-E1-KNZ" eventType="touchUpInside" id="NIW-Hc-YLb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZvO-LT-C88">
+                                                <rect key="frame" x="0.0" y="90.666666666666686" width="353" height="40.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Ответ 2">
+                                                    <backgroundConfiguration key="background" image="rectBlue"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="AnswerTwoButton:" destination="rUa-E1-KNZ" eventType="touchUpInside" id="Z9u-YA-4XA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgF-BZ-i3d">
+                                                <rect key="frame" x="0.0" y="181" width="353" height="40.666666666666657"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Ответ 3">
+                                                    <backgroundConfiguration key="background" image="rectBlue"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="AnswerThreeButton:" destination="rUa-E1-KNZ" eventType="touchUpInside" id="62a-33-hMj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VF5-U6-Jgp">
+                                                <rect key="frame" x="0.0" y="271.66666666666663" width="353" height="40.333333333333314"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Ответ 4">
+                                                    <backgroundConfiguration key="background" image="rectBlue"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="AnswerFourButton:" destination="rUa-E1-KNZ" eventType="touchUpInside" id="KVn-b1-VcO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="XZl-Y0-NMu" firstAttribute="top" secondItem="4F8-NJ-g7T" secondAttribute="bottom" constant="70" id="1KC-3l-pZi"/>
+                                    <constraint firstItem="aXv-Fv-VGQ" firstAttribute="top" secondItem="iRc-eC-7iR" secondAttribute="top" id="3IQ-h7-Zsq"/>
+                                    <constraint firstItem="aXv-Fv-VGQ" firstAttribute="bottom" secondItem="iRc-eC-7iR" secondAttribute="bottom" id="6UN-b0-Dp6"/>
+                                    <constraint firstItem="nGA-Tw-FFT" firstAttribute="leading" secondItem="W4z-6u-fmD" secondAttribute="leading" constant="20" symbolic="YES" id="6zk-u6-4MV"/>
+                                    <constraint firstAttribute="bottom" secondItem="XZl-Y0-NMu" secondAttribute="bottom" constant="60" id="7gA-O6-V8y"/>
+                                    <constraint firstItem="nGA-Tw-FFT" firstAttribute="top" secondItem="iRc-eC-7iR" secondAttribute="bottom" constant="8" symbolic="YES" id="8ax-RF-Fep"/>
+                                    <constraint firstItem="H1g-KL-Bbo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nGA-Tw-FFT" secondAttribute="trailing" constant="8" symbolic="YES" id="988-P9-1cY"/>
+                                    <constraint firstItem="aXv-Fv-VGQ" firstAttribute="trailing" secondItem="W4z-6u-fmD" secondAttribute="trailingMargin" id="Uty-t7-5Lp"/>
+                                    <constraint firstAttribute="trailing" secondItem="H1g-KL-Bbo" secondAttribute="trailing" constant="8" id="Z5p-xH-9HT"/>
+                                    <constraint firstItem="aXv-Fv-VGQ" firstAttribute="top" secondItem="W4z-6u-fmD" secondAttribute="top" constant="111" id="dNS-5f-ULS"/>
+                                    <constraint firstItem="aXv-Fv-VGQ" firstAttribute="leading" secondItem="iRc-eC-7iR" secondAttribute="trailing" constant="8" id="dfx-Fg-gwU"/>
+                                    <constraint firstAttribute="trailing" secondItem="XZl-Y0-NMu" secondAttribute="trailing" constant="20" id="eXP-2J-Wgh"/>
+                                    <constraint firstItem="iRc-eC-7iR" firstAttribute="top" secondItem="W4z-6u-fmD" secondAttribute="top" constant="111" id="evB-MX-gsw"/>
+                                    <constraint firstItem="iRc-eC-7iR" firstAttribute="leading" secondItem="W4z-6u-fmD" secondAttribute="leading" constant="20" id="fdr-yO-J77"/>
+                                    <constraint firstItem="4F8-NJ-g7T" firstAttribute="leading" secondItem="W4z-6u-fmD" secondAttribute="leading" constant="20" id="lGf-y7-bgR"/>
+                                    <constraint firstItem="XZl-Y0-NMu" firstAttribute="leading" secondItem="W4z-6u-fmD" secondAttribute="leading" constant="20" id="nbO-8R-yvd"/>
+                                    <constraint firstItem="H1g-KL-Bbo" firstAttribute="baseline" secondItem="nGA-Tw-FFT" secondAttribute="baseline" id="pY5-mO-zMm"/>
+                                    <constraint firstAttribute="trailing" secondItem="aXv-Fv-VGQ" secondAttribute="trailing" constant="8" id="vVx-9w-9kz"/>
+                                    <constraint firstItem="4F8-NJ-g7T" firstAttribute="top" secondItem="aXv-Fv-VGQ" secondAttribute="bottom" constant="100" id="wsf-Ga-Km5"/>
+                                    <constraint firstAttribute="trailing" secondItem="4F8-NJ-g7T" secondAttribute="trailing" constant="20" id="zcO-oY-c73"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="T3l-W0-1CV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W4z-6u-fmD" firstAttribute="leading" secondItem="GT7-8q-WDX" secondAttribute="leading" id="1PE-F6-FXD"/>
+                            <constraint firstAttribute="bottom" secondItem="W4z-6u-fmD" secondAttribute="bottom" id="4lC-Us-u7j"/>
+                            <constraint firstAttribute="trailing" secondItem="W4z-6u-fmD" secondAttribute="trailing" id="aWP-v8-dC2"/>
+                            <constraint firstItem="W4z-6u-fmD" firstAttribute="top" secondItem="GT7-8q-WDX" secondAttribute="top" id="bj3-mI-2Bl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ewb-HY-U9n"/>
+                    <connections>
+                        <outlet property="answerFour" destination="VF5-U6-Jgp" id="Rmg-P6-Tpb"/>
+                        <outlet property="answerOne" destination="31I-lx-GFb" id="kWl-RA-gio"/>
+                        <outlet property="answerThree" destination="lgF-BZ-i3d" id="pwy-Yq-uFh"/>
+                        <outlet property="answerTwo" destination="ZvO-LT-C88" id="YEu-Pz-gQ1"/>
+                        <outlet property="questionNumberLabel" destination="nGA-Tw-FFT" id="lfQ-Sg-lae"/>
+                        <outlet property="questionPriceLabel" destination="H1g-KL-Bbo" id="Yfr-3X-ihW"/>
+                        <outlet property="questionTextLabel" destination="aXv-Fv-VGQ" id="jpk-6G-3hY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z7l-6Z-rkb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2311" y="-442"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Group 28" width="105" height="81"/>
+        <image name="Group 29" width="105" height="85"/>
+        <image name="Group 33" width="105" height="81"/>
+        <image name="bgBlur" width="1242" height="2208"/>
+        <image name="logo" width="603" height="603"/>
+        <image name="rectBlue" width="960" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
