@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rules View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="RulesViewController" customModule="Millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgCoins" translatesAutoresizingMaskIntoConstraints="NO" id="tYo-Kx-COo" userLabel="bcgImage">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7u-JO-21S">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHV-Jv-xnz">
+                                        <rect key="frame" x="8" y="8" width="304" height="419"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wHV-Jv-xnz" secondAttribute="bottom" constant="141" id="0c6-zH-wUt"/>
+                                    <constraint firstItem="wHV-Jv-xnz" firstAttribute="leading" secondItem="N7u-JO-21S" secondAttribute="leadingMargin" id="2vx-nW-JBt"/>
+                                    <constraint firstItem="wHV-Jv-xnz" firstAttribute="centerX" secondItem="N7u-JO-21S" secondAttribute="centerX" id="7hK-SR-Nht"/>
+                                    <constraint firstItem="wHV-Jv-xnz" firstAttribute="trailing" secondItem="N7u-JO-21S" secondAttribute="trailingMargin" id="ZHK-LN-gMW"/>
+                                    <constraint firstItem="xgg-yO-dBm" firstAttribute="bottom" secondItem="wHV-Jv-xnz" secondAttribute="bottom" constant="141" id="uHx-Nb-lj6"/>
+                                    <constraint firstItem="wHV-Jv-xnz" firstAttribute="top" secondItem="xgg-yO-dBm" secondAttribute="top" constant="8" id="yWW-AA-p1j"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="O9D-8o-I7g"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="xgg-yO-dBm"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tYo-Kx-COo" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="12b-PW-I6B"/>
+                            <constraint firstItem="tYo-Kx-COo" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="9u6-J3-5Va"/>
+                            <constraint firstItem="tYo-Kx-COo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="B3y-Ju-icy"/>
+                            <constraint firstItem="tYo-Kx-COo" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="L1J-KG-So3"/>
+                            <constraint firstItem="N7u-JO-21S" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="PwP-2g-Kcy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="N7u-JO-21S" secondAttribute="bottom" id="RSE-31-DpA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="N7u-JO-21S" secondAttribute="trailing" id="RqS-xJ-OXH"/>
+                            <constraint firstItem="N7u-JO-21S" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fu2-OQ-Ku1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54.375" y="-34.859154929577464"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bgCoins" width="414" height="736"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

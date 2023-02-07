@@ -22,6 +22,8 @@
 		3327847E298FE04E001760A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3327847C298FE04E001760A3 /* Main.storyboard */; };
 		33278480298FE050001760A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3327847F298FE050001760A3 /* Assets.xcassets */; };
 		33278483298FE050001760A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33278481298FE050001760A3 /* LaunchScreen.storyboard */; };
+		E23838562992925C00D0A6AB /* RulesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E23838552992925C00D0A6AB /* RulesViewController.storyboard */; };
+		E23838582992926800D0A6AB /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23838572992926800D0A6AB /* RulesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		3327847F298FE050001760A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33278482298FE050001760A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33278484298FE050001760A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E23838552992925C00D0A6AB /* RulesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RulesViewController.storyboard; sourceTree = "<group>"; };
+		E23838572992926800D0A6AB /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 			children = (
 				1898BDD72991C21F006CE9DA /* WelcomeViewController.storyboard */,
 				1898BDD92991C24E006CE9DA /* NicknameViewController.storyboard */,
+				E23838552992925C00D0A6AB /* RulesViewController.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				3327847A298FE04E001760A3 /* ViewController.swift */,
 				184CF814299188D300124773 /* NicknameViewController.swift */,
 				1898BDDB2991C277006CE9DA /* WelcomeViewController.swift */,
+				E23838572992926800D0A6AB /* RulesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 				184CF81929919CBD00124773 /* Countdown.mp3 in Resources */,
 				184CF81D29919D2300124773 /* Answer accepted.mp3 in Resources */,
 				184CF81F29919D2800124773 /* Right answer.mp3 in Resources */,
+				E23838562992925C00D0A6AB /* RulesViewController.storyboard in Resources */,
 				33278483298FE050001760A3 /* LaunchScreen.storyboard in Resources */,
 				184CF82129919D5B00124773 /* Win.mp3 in Resources */,
 				1898BDDA2991C24E006CE9DA /* NicknameViewController.storyboard in Resources */,
@@ -216,6 +223,7 @@
 				1898BDDC2991C277006CE9DA /* WelcomeViewController.swift in Sources */,
 				3327847B298FE04E001760A3 /* ViewController.swift in Sources */,
 				33278477298FE04E001760A3 /* AppDelegate.swift in Sources */,
+				E23838582992926800D0A6AB /* RulesViewController.swift in Sources */,
 				33278479298FE04E001760A3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
