@@ -10,7 +10,7 @@ import UIKit
 class GameVC: UIViewController {
     
     var engine = GameEngine()
-
+    
     @IBOutlet weak var questionTextLabel: UILabel!
     @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var questionPriceLabel: UILabel!
@@ -27,6 +27,11 @@ class GameVC: UIViewController {
         engine.resetGame()
         engine.getStartQuestion()
         
+        updateUI()
+        
+    }
+    
+    func updateUI() {
         questionTextLabel.text = engine.currentQuestion?.qText
         questionNumberLabel.text = "Вопрос № \(String(engine.qNumber))"
         questionPriceLabel.text = "\(String(engine.score)) руб"
@@ -36,24 +41,36 @@ class GameVC: UIViewController {
         answerThree.setTitle(engine.currentQuestion?.qAnswers[2] ?? "Some error", for: .normal)
         answerFour.setTitle(engine.currentQuestion?.qAnswers[3] ?? "Some error", for: .normal)
         
+        answerOne.setBackgroundImage(UIImage(named: "Rectangle 3"), for: .normal)
+        answerTwo.setBackgroundImage(UIImage(named: "Rectangle 3"), for: .normal)
+        answerThree.setBackgroundImage(UIImage(named: "Rectangle 3"), for: .normal)
+        answerFour.setBackgroundImage(UIImage(named: "Rectangle 3"), for: .normal)
     }
     
-
     
-    @IBAction func AnswerOneButton(_ sender: UIButton) {
-        print("Нажали Ответ 1")
-    }
     
-    @IBAction func AnswerTwoButton(_ sender: UIButton) {
-        print("Нажали Ответ 2")
-    }
-    
-    @IBAction func AnswerThreeButton(_ sender: UIButton) {
-        print("Нажали Ответ 3")
-    }
-    
-    @IBAction func AnswerFourButton(_ sender: UIButton) {
-        print("Нажали Ответ 4")
+    @IBAction func AnswerButton(_ sender: UIButton) {
+        
+        print("\(sender.currentTitle ?? "")")
+        
+        
+        
+        
+        if engine.checkAnswer(answer: "\(sender.currentTitle ?? "")") {
+            print("Ответили верно из вью")
+            sender.setBackgroundImage(UIImage(named: "Rectangle green"), for: .normal)
+            let LadderViewController = self.storyboard?.instantiateViewController(withIdentifier: "LadderVC") as! LadderVC
+            LadderViewController.qNumberToFlash = engine.qNumber - 1
+            self.navigationController?.pushViewController(LadderViewController, animated: true)
+            
+            updateUI()
+            
+        } else {
+            print("Ответили не верно. Переходим на экран проиграл")
+            sender.setBackgroundImage(UIImage(named: "Rectangle red"), for: .normal)
+        }
+        
+        
     }
     
     @IBAction func FiftyFiftyButton(_ sender: UIButton) {
