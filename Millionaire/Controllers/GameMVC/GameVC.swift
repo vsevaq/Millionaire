@@ -41,10 +41,10 @@ class GameVC: UIViewController {
         answerThree.setTitle(engine.currentQuestion?.qAnswers[2] ?? "Some error", for: .normal)
         answerFour.setTitle(engine.currentQuestion?.qAnswers[3] ?? "Some error", for: .normal)
         
-        answerOne.setBackgroundImage(UIImage(named: "Rectangle 3"), for: .normal)
-        answerTwo.setBackgroundImage(UIImage(named: "Rectangle 3"), for: .normal)
-        answerThree.setBackgroundImage(UIImage(named: "Rectangle 3"), for: .normal)
-        answerFour.setBackgroundImage(UIImage(named: "Rectangle 3"), for: .normal)
+        answerOne.setBackgroundImage(UIImage(named: "rectBlue"), for: .normal)
+        answerTwo.setBackgroundImage(UIImage(named: "rectBlue"), for: .normal)
+        answerThree.setBackgroundImage(UIImage(named: "rectBlue"), for: .normal)
+        answerFour.setBackgroundImage(UIImage(named: "rectBlue"), for: .normal)
     }
     
     
@@ -58,7 +58,7 @@ class GameVC: UIViewController {
         
         if engine.checkAnswer(answer: "\(sender.currentTitle ?? "")") {
             print("Ответили верно из вью")
-            sender.setBackgroundImage(UIImage(named: "Rectangle green"), for: .normal)
+            sender.setBackgroundImage(UIImage(named: "rectGreen"), for: .normal)
             let LadderViewController = self.storyboard?.instantiateViewController(withIdentifier: "LadderVC") as! LadderVC
             LadderViewController.qNumberToFlash = engine.qNumber - 1
             self.navigationController?.pushViewController(LadderViewController, animated: true)
@@ -67,7 +67,7 @@ class GameVC: UIViewController {
             
         } else {
             print("Ответили не верно. Переходим на экран проиграл")
-            sender.setBackgroundImage(UIImage(named: "Rectangle red"), for: .normal)
+            sender.setBackgroundImage(UIImage(named: "rectRed"), for: .normal)
         }
         
         
