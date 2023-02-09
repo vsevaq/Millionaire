@@ -9,7 +9,6 @@ import UIKit
 
 class LadderVC: UIViewController {
     
-  //  var engine = GameEngine()
     var qNumberToFlash: Int = 0
     
     @IBOutlet weak var q1Label: UIImageView!
@@ -77,14 +76,15 @@ class LadderVC: UIViewController {
         case 15:
             print("Ответ 15")
             q15Label.image = UIImage(named: "rectGreen")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+                let winOrLoseViewController = self.storyboard?.instantiateViewController(withIdentifier: "WinOrLoseViewController") as! WinOrLoseViewController
+                self.navigationController?.pushViewController(winOrLoseViewController, animated: true)
+            }
         default:
             print("Нет ответа. Ошибка.")
         }
         
     }
     
-//    override func viewDidDisappear(_ animated: Bool) {
-//        engine.player?.stop()
-//    }
-
+    
 }

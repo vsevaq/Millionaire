@@ -14,6 +14,7 @@ class GameVC: UIViewController {
     @IBOutlet weak var questionTextLabel: UILabel!
     @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var questionPriceLabel: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var answerOne: UIButton!
     @IBOutlet weak var answerTwo: UIButton!
@@ -24,13 +25,11 @@ class GameVC: UIViewController {
         super.viewDidLoad()
         engine.resetGame()
         engine.getStartQuestion()
-   //     updateUI()
-       // engine.playSound(soundName: engine.countdown!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         engine.player?.stop()
-       updateUI()
+        updateUI()
         engine.playSound(soundName: engine.countdown!)
     }
     
@@ -57,31 +56,48 @@ class GameVC: UIViewController {
         print("\(sender.currentTitle ?? "")")
         sender.setBackgroundImage(UIImage(named: "rectPurple"), for: .normal)
         engine.playSound(soundName: engine.answerAccepted!)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             if self.engine.checkAnswer(answer: "\(sender.currentTitle ?? "")") {
                 print("Ответили верно из вью")
-                self.engine.playSound(soundName: self.engine.rightAnswer!)
-                sender.setBackgroundImage(UIImage(named: "rectGreen"), for: .normal)
-                let ladderViewController = self.storyboard?.instantiateViewController(withIdentifier: "LadderVC") as! LadderVC
-                ladderViewController.qNumberToFlash = self.engine.qNumber - 1
-                self.navigationController?.pushViewController(ladderViewController, animated: true)
                 
-             //   self.updateUI()
+                if self.engine.qNumber == 16 {
+                    self.engine.playSound(soundName: self.engine.win!)
+                    sender.setBackgroundImage(UIImage(named: "rectGreen"), for: .normal)
+                    let ladderViewController = self.storyboard?.instantiateViewController(withIdentifier: "LadderVC") as! LadderVC
+                    ladderViewController.qNumberToFlash = self.engine.qNumber - 1
+                    self.navigationController?.pushViewController(ladderViewController, animated: true)
+                } else {
+                    self.engine.playSound(soundName: self.engine.rightAnswer!)
+                    sender.setBackgroundImage(UIImage(named: "rectGreen"), for: .normal)
+                    let ladderViewController = self.storyboard?.instantiateViewController(withIdentifier: "LadderVC") as! LadderVC
+                    ladderViewController.qNumberToFlash = self.engine.qNumber - 1
+                    self.navigationController?.pushViewController(ladderViewController, animated: true)
+                }
+                
+                
+                
                 
             } else {
                 print("Ответили не верно. Переходим на экран проиграл")
                 self.engine.playSound(soundName: self.engine.wrongAnswer!)
                 sender.setBackgroundImage(UIImage(named: "rectRed"), for: .normal)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     let winOrLoseViewController = self.storyboard?.instantiateViewController(withIdentifier: "WinOrLoseViewController") as! WinOrLoseViewController
                     self.navigationController?.pushViewController(winOrLoseViewController, animated: true)
                 }
             }
         }
-
-
         
         
+    }
+    
+    @IBAction func takeMoney(_ sender: Any) {
+        self.engine.playSound(soundName: self.engine.win!)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            let winOrLoseViewController = self.storyboard?.instantiateViewController(withIdentifier: "WinOrLoseViewController") as! WinOrLoseViewController
+            self.navigationController?.pushViewController(winOrLoseViewController, animated: true)
+        }
     }
     
     @IBAction func FiftyFiftyButton(_ sender: UIButton) {
