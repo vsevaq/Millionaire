@@ -85,6 +85,10 @@ class GameVC: UIViewController {
     }
     
     @IBAction func FiftyFiftyButton(_ sender: UIButton) {
+        
+        let answers = [answerOne, answerTwo, answerThree, answerFour]
+        engine.fiftyFiftyLogic(with: answers, sender: sender)
+        
         print("Нажали 50:50")
     }
     

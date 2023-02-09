@@ -12,7 +12,7 @@ import AVFoundation
 class GameEngine {
     
     var player: AVAudioPlayer?
-   
+    
     var score: Int = 0
     var qNumber: Int = 1
     var currentQuestion: Question?
@@ -85,6 +85,21 @@ class GameEngine {
         player?.stop()
     }
     
+    var fiftyButtonCount = 0
+    
+    func fiftyFiftyLogic (with answers: [UIButton?], sender: UIButton) {
+        var wrongAnswers = 0
+        
+        if fiftyButtonCount < 1 {
+            for i in answers {
+                if currentQuestion?.correctAnswer ?? "Some error" != i?.currentTitle && wrongAnswers != 2 {
+                    i?.setBackgroundImage(UIImage(named: "rectRed"), for: .normal)
+                    wrongAnswers += 1
+                }
+                sender.setBackgroundImage(UIImage(named: "Frame 7"), for: .normal)
+            }
+            fiftyButtonCount += 1
+        }
+    }
     
 }
-
