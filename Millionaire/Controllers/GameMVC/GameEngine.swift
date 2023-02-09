@@ -96,7 +96,7 @@ class GameEngine {
                     i?.setBackgroundImage(UIImage(named: "rectRed"), for: .normal)
                     wrongAnswers += 1
                 }
-                sender.setBackgroundImage(UIImage(named: "Frame 7"), for: .normal)
+                sender.setImage(UIImage(named: "Frame 7"), for: .normal)
             }
             fiftyButtonCount += 1
         }
