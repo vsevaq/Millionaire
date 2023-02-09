@@ -89,20 +89,43 @@ class GameEngine {
         player?.stop()
     }
     
-    var fiftyButtonCount = 0
     
     func fiftyFiftyLogic (with answers: [UIButton?], sender: UIButton) {
         var wrongAnswers = 0
         
-        if fiftyButtonCount < 1 {
-            for i in answers {
-                if currentQuestion?.correctAnswer ?? "Some error" != i?.currentTitle && wrongAnswers != 2 {
-                    i?.setBackgroundImage(UIImage(named: "rectRed"), for: .normal)
+            for answer in answers {
+                if currentQuestion?.correctAnswer ?? "Some error" != answer?.currentTitle && wrongAnswers != 2 {
+                    answer?.setBackgroundImage(UIImage(named: "rectRed"), for: .normal)
                     wrongAnswers += 1
                 }
                 sender.setImage(UIImage(named: "Frame 7"), for: .normal)
             }
-            fiftyButtonCount += 1
+    }
+    
+    var helpCounter = 0
+    
+    func helpButtonLogic (with answers: [UIButton?], chance: Int, sender: UIButton, image: String) {
+        
+        if helpCounter < 2 { // два раза можно исп функцию
+            var arrayOfChances = Array (repeatElement(currentQuestion?.correctAnswer, count: chance))
+        // создаем массив из 70 или 80 правильных ответов
+                repeat {
+                    for i in currentQuestion?.qAnswers ?? [""] {
+                        if currentQuestion?.correctAnswer ?? "Some error" != i {
+                            arrayOfChances.append(i)
+                        }
+                    }
+                } while arrayOfChances.count <= 100
+            // добавляем 20 неправильных ответов к массиву
+        
+            let randomValue = arrayOfChances.randomElement() // выбираем рандом ответ
+            for answer in answers { // красим выбранный ответ
+                if answer?.titleLabel?.text == randomValue {
+                    answer!.setBackgroundImage(UIImage(named: "rectYellow"), for: .normal)
+                }
+            }
+            sender.setImage(UIImage(named: image), for: .normal) // меняем имедж сендера
+            helpCounter += 1
         }
     }
     
