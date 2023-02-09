@@ -20,15 +20,18 @@ class GameVC: UIViewController {
     @IBOutlet weak var answerThree: UIButton!
     @IBOutlet weak var answerFour: UIButton!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         engine.resetGame()
         engine.getStartQuestion()
-        
-        updateUI()
-        
+   //     updateUI()
+       // engine.playSound(soundName: engine.countdown!)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        engine.player?.stop()
+       updateUI()
+        engine.playSound(soundName: engine.countdown!)
     }
     
     func updateUI() {
@@ -52,23 +55,31 @@ class GameVC: UIViewController {
     @IBAction func AnswerButton(_ sender: UIButton) {
         
         print("\(sender.currentTitle ?? "")")
-        
-        
-        
-        
-        if engine.checkAnswer(answer: "\(sender.currentTitle ?? "")") {
-            print("Ответили верно из вью")
-            sender.setBackgroundImage(UIImage(named: "rectGreen"), for: .normal)
-            let LadderViewController = self.storyboard?.instantiateViewController(withIdentifier: "LadderVC") as! LadderVC
-            LadderViewController.qNumberToFlash = engine.qNumber - 1
-            self.navigationController?.pushViewController(LadderViewController, animated: true)
-            
-            updateUI()
-            
-        } else {
-            print("Ответили не верно. Переходим на экран проиграл")
-            sender.setBackgroundImage(UIImage(named: "rectRed"), for: .normal)
+        sender.setBackgroundImage(UIImage(named: "rectPurple"), for: .normal)
+        engine.playSound(soundName: engine.answerAccepted!)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            if self.engine.checkAnswer(answer: "\(sender.currentTitle ?? "")") {
+                print("Ответили верно из вью")
+                self.engine.playSound(soundName: self.engine.rightAnswer!)
+                sender.setBackgroundImage(UIImage(named: "rectGreen"), for: .normal)
+                let ladderViewController = self.storyboard?.instantiateViewController(withIdentifier: "LadderVC") as! LadderVC
+                ladderViewController.qNumberToFlash = self.engine.qNumber - 1
+                self.navigationController?.pushViewController(ladderViewController, animated: true)
+                
+             //   self.updateUI()
+                
+            } else {
+                print("Ответили не верно. Переходим на экран проиграл")
+                self.engine.playSound(soundName: self.engine.wrongAnswer!)
+                sender.setBackgroundImage(UIImage(named: "rectRed"), for: .normal)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    let winOrLoseViewController = self.storyboard?.instantiateViewController(withIdentifier: "WinOrLoseViewController") as! WinOrLoseViewController
+                    self.navigationController?.pushViewController(winOrLoseViewController, animated: true)
+                }
+            }
         }
+
+
         
         
     }

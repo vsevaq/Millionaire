@@ -9,6 +9,7 @@ import UIKit
 
 class LadderVC: UIViewController {
     
+  //  var engine = GameEngine()
     var qNumberToFlash: Int = 0
     
     @IBOutlet weak var q1Label: UIImageView!
@@ -81,5 +82,9 @@ class LadderVC: UIViewController {
         }
         
     }
+    
+//    override func viewDidDisappear(_ animated: Bool) {
+//        engine.player?.stop()
+//    }
 
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WinOrLoseViewController:UIViewController {
+class WinOrLoseViewController: UIViewController {
     
     @IBOutlet weak var attempts: UILabel!
     
