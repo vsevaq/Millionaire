@@ -104,16 +104,22 @@ class GameVC: UIViewController {
         
         let answers = [answerOne, answerTwo, answerThree, answerFour]
         engine.fiftyFiftyLogic(with: answers, sender: sender)
-        
+        sender.isEnabled = false // кнопка отключается
         print("Нажали 50:50")
     }
     
     @IBAction func PeopleHelpButton(_ sender: UIButton) {
+        let answers = [answerOne, answerTwo, answerThree, answerFour]
+        engine.helpButtonLogic(with: answers, chance: 70, sender: sender, image: "Frame 8")
+        sender.isEnabled = false
         print("Нажали помощь зала")
     }
     
     @IBAction func CallToFriendButton(_ sender: UIButton) {
-        print("Нажали звонок другу")
+        let answers = [answerOne, answerTwo, answerThree, answerFour]
+        engine.helpButtonLogic(with: answers, chance: 80, sender: sender, image: "Frame 9")
+        sender.isEnabled = false
+        print ("Нажали звонок другу")
     }
     
     
