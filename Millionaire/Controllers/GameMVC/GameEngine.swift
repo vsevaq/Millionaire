@@ -54,7 +54,7 @@ class GameEngine {
     
     func resetGame() {
         score = 100
-        qNumber = 1
+        qNumber = 14
         usedQuestions = []
     }
     
@@ -79,6 +79,10 @@ class GameEngine {
         } catch let error {
             print(error.localizedDescription)
         }
+    }
+    
+    func startTimer() {
+        
     }
     
     func stopSound() {
