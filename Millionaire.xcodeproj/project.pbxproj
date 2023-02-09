@@ -26,6 +26,7 @@
 		A10AAEC429942420005EF48A /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10AAEC129942420005EF48A /* GameModel.swift */; };
 		A10AAEC529942420005EF48A /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10AAEC229942420005EF48A /* GameEngine.swift */; };
 		A10AAECA299424CB005EF48A /* LadderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10AAEC9299424CB005EF48A /* LadderVC.swift */; };
+		A1B2F9432994E7D5001C7DED /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B2F9422994E7D5001C7DED /* Main2.storyboard */; };
 		A1E792FA29929CD400FED76C /* GameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1E792F929929CD400FED76C /* GameViewController.storyboard */; };
 		FD0CF8092992A69800013201 /* WinOrLoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0CF8082992A69800013201 /* WinOrLoseViewController.swift */; };
 		FD0CF80D2992A7B000013201 /* WinOrLoseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD0CF80C2992A7B000013201 /* WinOrLoseViewController.storyboard */; };
@@ -53,6 +54,7 @@
 		A10AAEC129942420005EF48A /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		A10AAEC229942420005EF48A /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		A10AAEC9299424CB005EF48A /* LadderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LadderVC.swift; sourceTree = "<group>"; };
+		A1B2F9422994E7D5001C7DED /* Main2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main2.storyboard; sourceTree = "<group>"; };
 		A1E792F929929CD400FED76C /* GameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameViewController.storyboard; sourceTree = "<group>"; };
 		FD0CF8082992A69800013201 /* WinOrLoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinOrLoseViewController.swift; sourceTree = "<group>"; };
 		FD0CF80C2992A7B000013201 /* WinOrLoseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WinOrLoseViewController.storyboard; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				184CF81729919CAB00124773 /* Sounds */,
 				3327847F298FE050001760A3 /* Assets.xcassets */,
 				3327847C298FE04E001760A3 /* Main.storyboard */,
+				A1B2F9422994E7D5001C7DED /* Main2.storyboard */,
 				33278481298FE050001760A3 /* LaunchScreen.storyboard */,
 				33278484298FE050001760A3 /* Info.plist */,
 				3327848E298FE109001760A3 /* Supporting Files */,
@@ -240,6 +243,7 @@
 				33278480298FE050001760A3 /* Assets.xcassets in Resources */,
 				184CF81B29919CF200124773 /* Wrong answer.mp3 in Resources */,
 				3327847E298FE04E001760A3 /* Main.storyboard in Resources */,
+				A1B2F9432994E7D5001C7DED /* Main2.storyboard in Resources */,
 				1898BDD82991C21F006CE9DA /* WelcomeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,9 +415,10 @@
 				INFOPLIST_FILE = Millionaire/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Main;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = Main2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,9 +446,10 @@
 				INFOPLIST_FILE = Millionaire/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Main;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = Main2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
