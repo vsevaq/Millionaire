@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnP-nW-Ufv">
-                                <rect key="frame" x="100" y="558" width="193" height="66"/>
+                                <rect key="frame" x="99" y="557" width="194" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start game!" cornerStyle="capsule">
@@ -32,25 +32,25 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="epp-MD-E0A" kind="show" id="HYb-cY-5o4"/>
+                                    <segue destination="ORq-CN-xQ6" kind="show" id="mdo-uT-Oye"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="to Who Wants to be a Millionare" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Mnn-Fc-PgH">
-                                <rect key="frame" x="22" y="354" width="348" height="173"/>
+                                <rect key="frame" x="21" y="353" width="348" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="IJA-CW-rPf">
-                                <rect key="frame" x="130" y="326" width="132" height="49"/>
+                                <rect key="frame" x="130" y="326" width="131" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szG-TA-sST">
-                                <rect key="frame" x="103" y="644" width="187" height="65"/>
+                                <rect key="frame" x="102" y="644" width="187" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Game rules" cornerStyle="capsule">
@@ -65,7 +65,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="QjO-Wr-YaP">
-                                <rect key="frame" x="71" y="68" width="250" height="261"/>
+                                <rect key="frame" x="71" y="67" width="250" height="261"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -217,10 +217,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hvh-fs-VfT" userLabel="Logo View">
-                                <rect key="frame" x="0.0" y="59" width="393" height="257"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="213"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="5id-gA-Tww" userLabel="Logo Image">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="257"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="213"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -267,6 +267,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="registerPressed:" destination="ORq-CN-xQ6" eventType="touchUpInside" id="hCg-QH-eUF"/>
+                                            <segue destination="epp-MD-E0A" kind="show" id="Jci-UZ-o5P"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -287,6 +288,7 @@
                             <constraint firstItem="c83-ie-3t5" firstAttribute="leading" secondItem="msP-N6-hWd" secondAttribute="leading" id="vRL-ek-xA0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="XZJ-RC-Exu"/>
                     <connections>
                         <outlet property="nicknameTextField" destination="pau-Zr-clh" id="Yue-uE-Ei9"/>
                     </connections>
