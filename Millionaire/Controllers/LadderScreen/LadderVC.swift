@@ -29,7 +29,6 @@ class LadderVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         switch qNumberToFlash {
         case 1:
             print("Ответ 1")

@@ -27,14 +27,16 @@ class GameVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
         engine.counterDelegate = self
         engine.resetGame()
         engine.getStartQuestion()
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
-        engine.player?.stop()
+        engine.stopSound()
+        engine.stopTimer()
+        timerLabel.text = "30"
         updateUI()
         engine.playSound(soundName: engine.countdown!)
         engine.startTimer()
@@ -56,10 +58,8 @@ class GameVC: UIViewController {
         answerFour.setBackgroundImage(UIImage(named: "rectBlue"), for: .normal)
     }
     
-    
-    
     @IBAction func AnswerButton(_ sender: UIButton) {
-        
+        engine.stopTimer()
         print("\(sender.currentTitle ?? "")")
         sender.setBackgroundImage(UIImage(named: "rectPurple"), for: .normal)
         engine.playSound(soundName: engine.answerAccepted!)
@@ -102,6 +102,7 @@ class GameVC: UIViewController {
                 sender.setBackgroundImage(UIImage(named: "rectRed"), for: .normal)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     let winOrLoseViewController = self.storyboard?.instantiateViewController(withIdentifier: "WinOrLoseViewController") as! WinOrLoseViewController
+                    winOrLoseViewController.winSumm = self.engine.winMoney
                     self.navigationController?.pushViewController(winOrLoseViewController, animated: true)
                 }
             }
@@ -111,17 +112,17 @@ class GameVC: UIViewController {
     }
     
     @IBAction func takeMoney(_ sender: Any) {
-        
+        engine.stopTimer()
         print("Приз составил \(self.engine.winMoney)")
         self.engine.playSound(soundName: self.engine.win!)
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             let winOrLoseViewController = self.storyboard?.instantiateViewController(withIdentifier: "WinOrLoseViewController") as! WinOrLoseViewController
+            winOrLoseViewController.winSumm = self.engine.winMoney
             self.navigationController?.pushViewController(winOrLoseViewController, animated: true)
         }
     }
     
     @IBAction func FiftyFiftyButton(_ sender: UIButton) {
-        
         let answers = [answerOne, answerTwo, answerThree, answerFour]
         engine.fiftyFiftyLogic(with: answers, sender: sender)
         sender.isEnabled = false // кнопка отключается
