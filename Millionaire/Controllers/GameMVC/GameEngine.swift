@@ -1,10 +1,3 @@
-//
-//  GameEngine.swift
-//  MillionaireGame
-//
-//  Created by Alexandr Rodionov on 6.02.23.
-//
-
 import Foundation
 import UIKit
 import AVFoundation
@@ -16,12 +9,12 @@ class GameEngine {
     var player: AVAudioPlayer?
     var counter = 30
     var timer = Timer()
-    
     var winMoney: Int = 0
-    
     var score: Int = 0
     var qNumber: Int = 1
     var currentQuestion: Question?
+    var wrongAnswers = 0
+    var helpCounter = 0
     
     let countdown = Bundle.main.url(forResource: "Countdown", withExtension: "mp3")
     let wrongAnswer = Bundle.main.url(forResource: "Wrong answer", withExtension: "mp3")
@@ -36,17 +29,14 @@ class GameEngine {
     
     func getNextQuestion() {
         qNumber += 1
-        
         if qNumber < 6 {
             score = questionMoney[qNumber] ?? 99999
             currentQuestion = qLevelOne[qNumber - 1]
         }
-        
         if qNumber >= 6 && qNumber < 11 {
             score = questionMoney[qNumber] ?? 9999
             currentQuestion = qLevelTwo[qNumber - 6]
         }
-        
         if qNumber >= 11 && qNumber < 16 {
             score = questionMoney[qNumber] ?? 9999
             currentQuestion = qLevelTree[qNumber - 11]
@@ -62,13 +52,9 @@ class GameEngine {
     
     func checkAnswer(answer: String) -> Bool {
         if currentQuestion?.correctAnswer ?? "Some error" == answer {
-            print("Ответ верный")
             getNextQuestion()
             return true
-        } else {
-            print("Ответ не верный")
-            return false
-        }
+        } else { return false }
     }
     
     func playSound(soundName: URL) {
@@ -82,7 +68,7 @@ class GameEngine {
             print(error.localizedDescription)
         }
     }
-
+    
     func stopSound() {
         player?.stop()
     }
@@ -95,7 +81,6 @@ class GameEngine {
     @objc func timerAction() {
         counter -= 1
         counterDelegate?.updateCounter(counter: counter)
-        print("время в engine \(counter)")
         if counter == 0 { stopTimer() }
     }
     
@@ -104,33 +89,27 @@ class GameEngine {
     }
     
     func fiftyFiftyLogic (with answers: [UIButton?], sender: UIButton) {
-        var wrongAnswers = 0
-        
-            for answer in answers {
-                if currentQuestion?.correctAnswer ?? "Some error" != answer?.currentTitle && wrongAnswers != 2 {
-                    answer?.setBackgroundImage(UIImage(named: "rectRed"), for: .normal)
-                    wrongAnswers += 1
-                }
-                sender.setImage(UIImage(named: "Frame 7"), for: .normal)
+        for answer in answers {
+            if currentQuestion?.correctAnswer ?? "Some error" != answer?.currentTitle && wrongAnswers != 2 {
+                answer?.setBackgroundImage(UIImage(named: "rectRed"), for: .normal)
+                wrongAnswers += 1
             }
+            sender.setImage(UIImage(named: "Frame 7"), for: .normal)
+        }
     }
     
-    var helpCounter = 0
-    
     func helpButtonLogic (with answers: [UIButton?], chance: Int, sender: UIButton, image: String) {
-        
         if helpCounter < 2 { // два раза можно исп функцию
             var arrayOfChances = Array (repeatElement(currentQuestion?.correctAnswer, count: chance))
-        // создаем массив из 70 или 80 правильных ответов
-                repeat {
-                    for i in currentQuestion?.qAnswers ?? [""] {
-                        if currentQuestion?.correctAnswer ?? "Some error" != i {
-                            arrayOfChances.append(i)
-                        }
+            // создаем массив из 70 или 80 правильных ответов
+            repeat {
+                for i in currentQuestion?.qAnswers ?? [""] {
+                    if currentQuestion?.correctAnswer ?? "Some error" != i {
+                        arrayOfChances.append(i)
                     }
-                } while arrayOfChances.count <= 100
+                }
+            } while arrayOfChances.count <= 100
             // добавляем 20 неправильных ответов к массиву
-        
             let randomValue = arrayOfChances.randomElement() // выбираем рандом ответ
             for answer in answers { // красим выбранный ответ
                 if answer?.titleLabel?.text == randomValue {
@@ -141,6 +120,4 @@ class GameEngine {
             helpCounter += 1
         }
     }
-    
 }
-

@@ -1,10 +1,3 @@
-//
-//  GameVC.swift
-//  MillionaireGame
-//
-//  Created by Alexandr Rodionov on 6.02.23.
-//
-
 import UIKit
 
 protocol CounterDelegate: AnyObject {
@@ -12,7 +5,6 @@ protocol CounterDelegate: AnyObject {
 }
 
 class GameVC: UIViewController {
-    
     var engine = GameEngine()
     
     @IBOutlet weak var questionTextLabel: UILabel!
@@ -60,65 +52,61 @@ class GameVC: UIViewController {
     
     @IBAction func AnswerButton(_ sender: UIButton) {
         engine.stopTimer()
-        print("\(sender.currentTitle ?? "")")
         sender.setBackgroundImage(UIImage(named: "rectPurple"), for: .normal)
         engine.playSound(soundName: engine.answerAccepted!)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             if self.engine.checkAnswer(answer: "\(sender.currentTitle ?? "")") {
-                print("Ответили верно из вью")
                 self.engine.winMoney = questionMoney[self.engine.qNumber - 1]!
-                print("Текущий выйгрыш =\(self.engine.winMoney)")
+                
                 if self.engine.qNumber == 16 {
                     self.engine.playSound(soundName: self.engine.win!)
-                    sender.setBackgroundImage(UIImage(named: "rectGreen"), for: .normal)
-                    let ladderViewController = self.storyboard?.instantiateViewController(withIdentifier: "LadderVC") as! LadderVC
-                    ladderViewController.qNumberToFlash = self.engine.qNumber - 1
-                    self.navigationController?.pushViewController(ladderViewController, animated: true)
+                    self.goToLadderVC(sender)
                 } else {
                     self.engine.playSound(soundName: self.engine.rightAnswer!)
-                    sender.setBackgroundImage(UIImage(named: "rectGreen"), for: .normal)
-                    let ladderViewController = self.storyboard?.instantiateViewController(withIdentifier: "LadderVC") as! LadderVC
-                    ladderViewController.qNumberToFlash = self.engine.qNumber - 1
-                    self.navigationController?.pushViewController(ladderViewController, animated: true)
+                    self.goToLadderVC(sender)
                 }
-                
-                
-                
-                
             } else {
-                print("Ответили не верно. Переходим на экран проиграл")
-                if self.engine.winMoney < 1000 {
-                    self.engine.winMoney = 0
-                }
-                if self.engine.winMoney >= 1000 && self.engine.winMoney < 32000 {
-                    self.engine.winMoney = 1000
-                }
-                if self.engine.winMoney >= 32000 {
-                    self.engine.winMoney = 32000
-                }
-                print("Приз составил \(self.engine.winMoney)")
+                self.checkGarantMoney()
                 self.engine.playSound(soundName: self.engine.wrongAnswer!)
                 sender.setBackgroundImage(UIImage(named: "rectRed"), for: .normal)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                    let winOrLoseViewController = self.storyboard?.instantiateViewController(withIdentifier: "WinOrLoseViewController") as! WinOrLoseViewController
-                    winOrLoseViewController.winSumm = self.engine.winMoney
-                    self.navigationController?.pushViewController(winOrLoseViewController, animated: true)
+                    self.goToWinOrLoseViewController()
                 }
             }
         }
-        
-        
+    }
+    
+    func checkGarantMoney() {
+        if engine.winMoney < 1000 {
+            engine.winMoney = 0
+        }
+        if engine.winMoney >= 1000 && engine.winMoney < 32000 {
+            engine.winMoney = 1000
+        }
+        if engine.winMoney >= 32000 {
+            engine.winMoney = 32000
+        }
+    }
+    
+    func goToLadderVC(_ sender: UIButton) {
+        sender.setBackgroundImage(UIImage(named: "rectGreen"), for: .normal)
+        let ladderViewController = self.storyboard?.instantiateViewController(withIdentifier: "LadderVC") as! LadderVC
+        ladderViewController.qNumberToFlash = self.engine.qNumber - 1
+        self.navigationController?.pushViewController(ladderViewController, animated: true)
+    }
+    
+    func goToWinOrLoseViewController() {
+        let winOrLoseViewController = self.storyboard?.instantiateViewController(withIdentifier: "WinOrLoseViewController") as! WinOrLoseViewController
+        winOrLoseViewController.winSumm = self.engine.winMoney
+        self.navigationController?.pushViewController(winOrLoseViewController, animated: true)
     }
     
     @IBAction func takeMoney(_ sender: Any) {
         engine.stopTimer()
-        print("Приз составил \(self.engine.winMoney)")
         self.engine.playSound(soundName: self.engine.win!)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            let winOrLoseViewController = self.storyboard?.instantiateViewController(withIdentifier: "WinOrLoseViewController") as! WinOrLoseViewController
-            winOrLoseViewController.winSumm = self.engine.winMoney
-            self.navigationController?.pushViewController(winOrLoseViewController, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.goToWinOrLoseViewController()
         }
     }
     
@@ -126,39 +114,29 @@ class GameVC: UIViewController {
         let answers = [answerOne, answerTwo, answerThree, answerFour]
         engine.fiftyFiftyLogic(with: answers, sender: sender)
         sender.isEnabled = false // кнопка отключается
-        print("Нажали 50:50")
     }
     
     @IBAction func PeopleHelpButton(_ sender: UIButton) {
         let answers = [answerOne, answerTwo, answerThree, answerFour]
         engine.helpButtonLogic(with: answers, chance: 70, sender: sender, image: "Frame 8")
         sender.isEnabled = false
-        print("Нажали помощь зала")
     }
     
     @IBAction func CallToFriendButton(_ sender: UIButton) {
         let answers = [answerOne, answerTwo, answerThree, answerFour]
         engine.helpButtonLogic(with: answers, chance: 80, sender: sender, image: "Frame 9")
         sender.isEnabled = false
-        print ("Нажали звонок другу")
     }
-    
-    
 }
 
 extension GameVC: CounterDelegate {
     func updateCounter(counter: Int) {
         if counter == 0 {
-            print("конец таймеру")
-            
+            checkGarantMoney()
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.engine.playSound(soundName: self.engine.wrongAnswer!)
-                let winOrLoseViewController = self.storyboard?.instantiateViewController(withIdentifier: "WinOrLoseViewController") as! WinOrLoseViewController
-                winOrLoseViewController.winSumm = self.engine.winMoney
-                self.navigationController?.pushViewController(winOrLoseViewController, animated: true)
+                self.goToWinOrLoseViewController()
             }
         }
         timerLabel.text = String(counter)
-        print("счетчик в делегате контроллера \(counter)")
     }
 }
