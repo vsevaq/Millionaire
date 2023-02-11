@@ -148,6 +148,16 @@ class GameVC: UIViewController {
 
 extension GameVC: CounterDelegate {
     func updateCounter(counter: Int) {
+        if counter == 0 {
+            print("конец таймеру")
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.engine.playSound(soundName: self.engine.wrongAnswer!)
+                let winOrLoseViewController = self.storyboard?.instantiateViewController(withIdentifier: "WinOrLoseViewController") as! WinOrLoseViewController
+                winOrLoseViewController.winSumm = self.engine.winMoney
+                self.navigationController?.pushViewController(winOrLoseViewController, animated: true)
+            }
+        }
         timerLabel.text = String(counter)
         print("счетчик в делегате контроллера \(counter)")
     }

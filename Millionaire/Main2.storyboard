@@ -908,6 +908,7 @@
                     <connections>
                         <outlet property="attempts" destination="d7U-lL-6a8" id="Ci4-K0-HfW"/>
                         <outlet property="moneyLabel" destination="zyj-Nf-PjM" id="fEx-Xs-s22"/>
+                        <outlet property="playButton" destination="tly-Di-QTw" id="kwP-Sh-i1i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ye1-Yc-5oj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
