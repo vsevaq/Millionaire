@@ -1,14 +1,6 @@
-//
-//  GameModel.swift
-//  MillionaireGame
-//
-//  Created by Alexandr Rodionov on 6.02.23.
-//
-
 import Foundation
 
 struct Question {
-    
     let id: Int
     let qText: String
     let qAnswers: [String]
