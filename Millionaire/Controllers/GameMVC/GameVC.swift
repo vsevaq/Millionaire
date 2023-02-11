@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol CounterDelegate: AnyObject {
+    func updateCounter(counter: Int)
+}
+
 class GameVC: UIViewController {
     
     var engine = GameEngine()
@@ -23,14 +27,17 @@ class GameVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        engine.counterDelegate = self
         engine.resetGame()
         engine.getStartQuestion()
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         engine.player?.stop()
         updateUI()
         engine.playSound(soundName: engine.countdown!)
+        engine.startTimer()
     }
     
     func updateUI() {
@@ -60,7 +67,8 @@ class GameVC: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             if self.engine.checkAnswer(answer: "\(sender.currentTitle ?? "")") {
                 print("Ответили верно из вью")
-                
+                self.engine.winMoney = questionMoney[self.engine.qNumber - 1]!
+                print("Текущий выйгрыш =\(self.engine.winMoney)")
                 if self.engine.qNumber == 16 {
                     self.engine.playSound(soundName: self.engine.win!)
                     sender.setBackgroundImage(UIImage(named: "rectGreen"), for: .normal)
@@ -80,6 +88,16 @@ class GameVC: UIViewController {
                 
             } else {
                 print("Ответили не верно. Переходим на экран проиграл")
+                if self.engine.winMoney < 1000 {
+                    self.engine.winMoney = 0
+                }
+                if self.engine.winMoney >= 1000 && self.engine.winMoney < 32000 {
+                    self.engine.winMoney = 1000
+                }
+                if self.engine.winMoney >= 32000 {
+                    self.engine.winMoney = 32000
+                }
+                print("Приз составил \(self.engine.winMoney)")
                 self.engine.playSound(soundName: self.engine.wrongAnswer!)
                 sender.setBackgroundImage(UIImage(named: "rectRed"), for: .normal)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -93,6 +111,8 @@ class GameVC: UIViewController {
     }
     
     @IBAction func takeMoney(_ sender: Any) {
+        
+        print("Приз составил \(self.engine.winMoney)")
         self.engine.playSound(soundName: self.engine.win!)
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             let winOrLoseViewController = self.storyboard?.instantiateViewController(withIdentifier: "WinOrLoseViewController") as! WinOrLoseViewController
@@ -123,4 +143,11 @@ class GameVC: UIViewController {
     }
     
     
+}
+
+extension GameVC: CounterDelegate {
+    func updateCounter(counter: Int) {
+        timerLabel.text = String(counter)
+        print("счетчик в делегате контроллера \(counter)")
+    }
 }

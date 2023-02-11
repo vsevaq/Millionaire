@@ -11,7 +11,13 @@ import AVFoundation
 
 class GameEngine {
     
+    weak var counterDelegate: CounterDelegate?
+    
     var player: AVAudioPlayer?
+    var counter = 30
+    var timer = Timer()
+    
+    var winMoney: Int = 0
     
     var score: Int = 0
     var qNumber: Int = 1
@@ -54,7 +60,7 @@ class GameEngine {
     
     func resetGame() {
         score = 100
-        qNumber = 14
+        qNumber = 1
         usedQuestions = []
     }
     
@@ -80,17 +86,26 @@ class GameEngine {
             print(error.localizedDescription)
         }
     }
-    
-    func startTimer() {
-        
-        
-        
-    }
-    
+
     func stopSound() {
         player?.stop()
     }
     
+    func startTimer() {
+        counter = 30
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+    }
+    
+    @objc func timerAction() {
+        counter -= 1
+        counterDelegate?.updateCounter(counter: counter)
+        print("время в engine \(counter)")
+        if counter == 0 { stopTimer() }
+    }
+    
+    func stopTimer() {
+        timer.invalidate()
+    }
     
     func fiftyFiftyLogic (with answers: [UIButton?], sender: UIButton) {
         var wrongAnswers = 0
@@ -132,3 +147,4 @@ class GameEngine {
     }
     
 }
+
