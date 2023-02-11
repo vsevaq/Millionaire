@@ -21,10 +21,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnP-nW-Ufv">
-                                <rect key="frame" x="99" y="557" width="194" height="67"/>
+                                <rect key="frame" x="99" y="556" width="193" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Start game!" cornerStyle="capsule">
+                                <buttonConfiguration key="configuration" style="plain" title="Начать!" cornerStyle="capsule">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                     </backgroundConfiguration>
@@ -36,24 +36,24 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="to Who Wants to be a Millionare" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Mnn-Fc-PgH">
-                                <rect key="frame" x="21" y="353" width="348" height="174"/>
+                                <rect key="frame" x="20" y="352" width="349" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="IJA-CW-rPf">
-                                <rect key="frame" x="130" y="326" width="131" height="48"/>
+                                <rect key="frame" x="129" y="326" width="132" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szG-TA-sST">
-                                <rect key="frame" x="102" y="644" width="187" height="65"/>
+                                <rect key="frame" x="101" y="643" width="188" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Game rules" cornerStyle="capsule">
+                                <buttonConfiguration key="configuration" style="plain" title="Правила игры" cornerStyle="capsule">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                     </backgroundConfiguration>
@@ -65,7 +65,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="QjO-Wr-YaP">
-                                <rect key="frame" x="71" y="67" width="250" height="261"/>
+                                <rect key="frame" x="70" y="66" width="250" height="262"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -261,9 +261,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <buttonConfiguration key="configuration" style="filled" title="Register">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="28"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="baseBackgroundColor" red="0.52156862749999999" green="0.80392156859999997" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" red="0.34509804840000002" green="0.33725491169999999" blue="0.81176471709999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="registerPressed:" destination="ORq-CN-xQ6" eventType="touchUpInside" id="hCg-QH-eUF"/>
@@ -308,157 +308,116 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="re5-k7-0RE" userLabel="GameView">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgBlur" translatesAutoresizingMaskIntoConstraints="NO" id="zub-ng-kJu" userLabel="BackView">
-                                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bgBlur" translatesAutoresizingMaskIntoConstraints="NO" id="zub-ng-kJu" userLabel="BackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ctu-Ac-f08">
-                                        <rect key="frame" x="20" y="111" width="100" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="Zb3-8I-D0U"/>
-                                            <constraint firstAttribute="width" constant="100" id="ldf-eB-jv9"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sv3-cd-Y3g">
-                                        <rect key="frame" x="128" y="111" width="257" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="rNE-1d-gee"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вопрос?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sv3-cd-Y3g">
+                                        <rect key="frame" x="122" y="94" width="251" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос №" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNl-Rb-eT6">
-                                        <rect key="frame" x="20" y="219" width="120" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Jck-4h-0Vh"/>
-                                            <constraint firstAttribute="height" constant="35" id="bvT-EY-H81"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вопрос №" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNl-Rb-eT6">
+                                        <rect key="frame" x="26" y="198" width="135" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bni-SR-3gr">
-                                        <rect key="frame" x="265" y="219" width="120" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="djQ-45-sDt"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="jdv-E0-fT4"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8gs-rk-vEY">
-                                        <rect key="frame" x="20" y="711" width="353" height="81"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NX0-XZ-jQY">
-                                                <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="81"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="Group 28"/>
-                                                <connections>
-                                                    <action selector="FiftyFiftyButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="L0I-qK-FGP"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83f-h7-PGk">
-                                                <rect key="frame" x="117.66666666666666" y="0.0" width="117.66666666666666" height="81"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="Group 29"/>
-                                                <connections>
-                                                    <action selector="PeopleHelpButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="OHK-cn-hen"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaY-bR-0ob">
-                                                <rect key="frame" x="235.33333333333334" y="0.0" width="117.66666666666666" height="81"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="Group 33"/>
-                                                <connections>
-                                                    <action selector="CallToFriendButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="n9W-g2-5ST"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="uMf-PM-biV">
-                                        <rect key="frame" x="20" y="311" width="353" height="390"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6n-YB-gHd">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="38"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Ответ 1" backgroundImage="rectBlue"/>
-                                                <connections>
-                                                    <action selector="AnswerButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="ph6-Ca-Xt3"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkc-ep-8j1">
-                                                <rect key="frame" x="0.0" y="88" width="353" height="38"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Ответ 2" backgroundImage="rectBlue"/>
-                                                <connections>
-                                                    <action selector="AnswerButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="KNV-Ek-nyw"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVH-CW-Vkx">
-                                                <rect key="frame" x="0.0" y="176" width="353" height="38"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Ответ 3" backgroundImage="rectBlue"/>
-                                                <connections>
-                                                    <action selector="AnswerButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="pIW-gP-I5a"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q40-L1-lSS">
-                                                <rect key="frame" x="0.0" y="264" width="353" height="38"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Ответ 4" backgroundImage="rectBlue"/>
-                                                <connections>
-                                                    <action selector="AnswerButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="E3N-b7-LCK"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIz-nv-vaj">
-                                                <rect key="frame" x="0.0" y="352" width="353" height="38"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Забрать деньги" backgroundImage="rectGreen"/>
-                                                <connections>
-                                                    <action selector="takeMoney:" destination="epp-MD-E0A" eventType="touchUpInside" id="J8g-So-6gg"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFN-fA-1zV">
-                                        <rect key="frame" x="180.33333333333334" y="221" width="32.666666666666657" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFN-fA-1zV">
+                                        <rect key="frame" x="174" y="197" width="46" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bni-SR-3gr">
+                                        <rect key="frame" x="259" y="197" width="114" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6n-YB-gHd">
+                                        <rect key="frame" x="18" y="256" width="355" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Ответ 1" backgroundImage="rectBlue"/>
+                                        <connections>
+                                            <action selector="AnswerButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="ph6-Ca-Xt3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkc-ep-8j1">
+                                        <rect key="frame" x="18" y="337" width="355" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Ответ 2" backgroundImage="rectBlue"/>
+                                        <connections>
+                                            <action selector="AnswerButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="KNV-Ek-nyw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVH-CW-Vkx">
+                                        <rect key="frame" x="19" y="413" width="355" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Ответ 3" backgroundImage="rectBlue"/>
+                                        <connections>
+                                            <action selector="AnswerButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="pIW-gP-I5a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NX0-XZ-jQY">
+                                        <rect key="frame" x="18" y="700" width="100" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="Group 28"/>
+                                        <connections>
+                                            <action selector="FiftyFiftyButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="L0I-qK-FGP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaY-bR-0ob">
+                                        <rect key="frame" x="273" y="700" width="100" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="Group 33"/>
+                                        <connections>
+                                            <action selector="CallToFriendButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="n9W-g2-5ST"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q40-L1-lSS">
+                                        <rect key="frame" x="18" y="493" width="355" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Ответ 4" backgroundImage="rectBlue"/>
+                                        <connections>
+                                            <action selector="AnswerButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="E3N-b7-LCK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83f-h7-PGk">
+                                        <rect key="frame" x="146" y="700" width="100" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="Group 29"/>
+                                        <connections>
+                                            <action selector="PeopleHelpButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="OHK-cn-hen"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ctu-Ac-f08">
+                                        <rect key="frame" x="23" y="95" width="95" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIz-nv-vaj">
+                                        <rect key="frame" x="18" y="635" width="355" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Забрать деньги" backgroundImage="rectGreen"/>
+                                        <connections>
+                                            <action selector="takeMoney:" destination="epp-MD-E0A" eventType="touchUpInside" id="J8g-So-6gg"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="uMf-PM-biV" firstAttribute="leading" secondItem="re5-k7-0RE" secondAttribute="leading" constant="20" id="0Qj-Ap-mh2"/>
-                                    <constraint firstItem="TNl-Rb-eT6" firstAttribute="leading" secondItem="re5-k7-0RE" secondAttribute="leading" constant="20" symbolic="YES" id="0o5-az-uSd"/>
-                                    <constraint firstItem="ctu-Ac-f08" firstAttribute="leading" secondItem="re5-k7-0RE" secondAttribute="leading" constant="20" id="6QS-9i-LKy"/>
-                                    <constraint firstItem="8gs-rk-vEY" firstAttribute="top" secondItem="uMf-PM-biV" secondAttribute="bottom" constant="10" id="7TF-Rf-a8B"/>
-                                    <constraint firstAttribute="bottom" secondItem="zub-ng-kJu" secondAttribute="bottom" constant="-80" id="9Ri-Rt-UiF"/>
-                                    <constraint firstAttribute="trailing" secondItem="8gs-rk-vEY" secondAttribute="trailing" constant="20" id="ERD-jk-o75"/>
-                                    <constraint firstItem="bni-SR-3gr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TNl-Rb-eT6" secondAttribute="trailing" constant="8" symbolic="YES" id="Jtb-35-heB"/>
-                                    <constraint firstAttribute="trailing" secondItem="bni-SR-3gr" secondAttribute="trailing" constant="8" id="QFG-mC-mQG"/>
-                                    <constraint firstItem="ctu-Ac-f08" firstAttribute="top" secondItem="re5-k7-0RE" secondAttribute="top" constant="111" id="RNE-Ue-PQC"/>
-                                    <constraint firstItem="Sv3-cd-Y3g" firstAttribute="trailing" secondItem="re5-k7-0RE" secondAttribute="trailingMargin" id="RNr-6C-Z6O"/>
-                                    <constraint firstItem="KFN-fA-1zV" firstAttribute="centerX" secondItem="uMf-PM-biV" secondAttribute="centerX" id="TnQ-Kg-eel"/>
-                                    <constraint firstAttribute="trailing" secondItem="uMf-PM-biV" secondAttribute="trailing" constant="20" id="UQe-za-zV3"/>
-                                    <constraint firstItem="zub-ng-kJu" firstAttribute="top" secondItem="re5-k7-0RE" secondAttribute="top" id="YFd-qr-DaL"/>
-                                    <constraint firstItem="TNl-Rb-eT6" firstAttribute="top" secondItem="ctu-Ac-f08" secondAttribute="bottom" constant="8" symbolic="YES" id="brM-AC-rGp"/>
-                                    <constraint firstAttribute="bottom" secondItem="8gs-rk-vEY" secondAttribute="bottom" constant="60" id="eWj-xz-7Aq"/>
-                                    <constraint firstItem="zub-ng-kJu" firstAttribute="leading" secondItem="re5-k7-0RE" secondAttribute="leading" id="emc-Kx-UDL"/>
-                                    <constraint firstItem="bni-SR-3gr" firstAttribute="baseline" secondItem="TNl-Rb-eT6" secondAttribute="baseline" id="gn9-HI-K4C"/>
-                                    <constraint firstItem="Sv3-cd-Y3g" firstAttribute="top" secondItem="ctu-Ac-f08" secondAttribute="top" id="hoY-OF-WWm"/>
-                                    <constraint firstItem="KFN-fA-1zV" firstAttribute="centerY" secondItem="TNl-Rb-eT6" secondAttribute="centerY" id="pnx-lc-YnA"/>
-                                    <constraint firstItem="Sv3-cd-Y3g" firstAttribute="leading" secondItem="ctu-Ac-f08" secondAttribute="trailing" constant="8" id="r5d-hC-Hps"/>
-                                    <constraint firstItem="Sv3-cd-Y3g" firstAttribute="top" secondItem="re5-k7-0RE" secondAttribute="top" constant="111" id="rEs-TQ-PPi"/>
-                                    <constraint firstAttribute="trailing" secondItem="Sv3-cd-Y3g" secondAttribute="trailing" constant="8" id="rw5-KN-9Nx"/>
-                                    <constraint firstItem="8gs-rk-vEY" firstAttribute="leading" secondItem="re5-k7-0RE" secondAttribute="leading" constant="20" id="tfP-a9-PDm"/>
-                                    <constraint firstAttribute="trailing" secondItem="zub-ng-kJu" secondAttribute="trailing" constant="-37" id="vby-66-9sF"/>
-                                    <constraint firstItem="uMf-PM-biV" firstAttribute="top" secondItem="Sv3-cd-Y3g" secondAttribute="bottom" constant="100" id="yuR-5V-aHI"/>
-                                    <constraint firstItem="Sv3-cd-Y3g" firstAttribute="bottom" secondItem="ctu-Ac-f08" secondAttribute="bottom" id="zQf-XF-J3H"/>
-                                    <constraint firstItem="KFN-fA-1zV" firstAttribute="top" secondItem="Sv3-cd-Y3g" secondAttribute="bottom" constant="10" id="zkv-SM-Lau"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="89v-8w-Xjd"/>
@@ -484,7 +443,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="37J-Sg-GEd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="507.63358778625951" y="674.64788732394368"/>
+            <point key="canvasLocation" x="507.24637681159425" y="674.33035714285711"/>
         </scene>
         <!--LadderVC-->
         <scene sceneID="5B8-Xf-WtA">
@@ -874,7 +833,7 @@
                                                 </constraints>
                                                 <color key="tintColor" red="0.0" green="0.75067141790000003" blue="0.18121002559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="PLAY AGAIN">
+                                                <buttonConfiguration key="configuration" style="filled" title="ИГРАТЬ СНОВА">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="33"/>
                                                 </buttonConfiguration>
                                                 <connections>
