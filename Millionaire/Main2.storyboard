@@ -300,7 +300,7 @@
         <!--GameVC-->
         <scene sceneID="Ngo-V7-90D">
             <objects>
-                <viewController id="epp-MD-E0A" userLabel="GameVC" customClass="GameVC" customModule="Millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameVC" id="epp-MD-E0A" userLabel="GameVC" customClass="GameVC" customModule="Millionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="12L-u2-U9J">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -348,28 +348,28 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8gs-rk-vEY">
-                                        <rect key="frame" x="20" y="697" width="353" height="95"/>
+                                        <rect key="frame" x="20" y="711" width="353" height="81"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NX0-XZ-jQY">
-                                                <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="95"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="Group 28"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NX0-XZ-jQY">
+                                                <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="81"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="Group 28"/>
                                                 <connections>
                                                     <action selector="FiftyFiftyButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="L0I-qK-FGP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83f-h7-PGk">
-                                                <rect key="frame" x="117.66666666666666" y="0.0" width="117.66666666666666" height="95"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="Group 29"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83f-h7-PGk">
+                                                <rect key="frame" x="117.66666666666666" y="0.0" width="117.66666666666666" height="81"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="Group 29"/>
                                                 <connections>
                                                     <action selector="PeopleHelpButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="OHK-cn-hen"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaY-bR-0ob">
-                                                <rect key="frame" x="235.33333333333334" y="0.0" width="117.66666666666666" height="95"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="Group 33"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaY-bR-0ob">
+                                                <rect key="frame" x="235.33333333333334" y="0.0" width="117.66666666666666" height="81"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="Group 33"/>
                                                 <connections>
                                                     <action selector="CallToFriendButton:" destination="epp-MD-E0A" eventType="touchUpInside" id="n9W-g2-5ST"/>
                                                 </connections>
@@ -377,10 +377,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="uMf-PM-biV">
-                                        <rect key="frame" x="20" y="311" width="353" height="376"/>
+                                        <rect key="frame" x="20" y="311" width="353" height="390"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6n-YB-gHd">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="35.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="353" height="38"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Ответ 1" backgroundImage="rectBlue"/>
                                                 <connections>
@@ -388,7 +388,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkc-ep-8j1">
-                                                <rect key="frame" x="0.0" y="85.333333333333314" width="353" height="35"/>
+                                                <rect key="frame" x="0.0" y="88" width="353" height="38"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Ответ 2" backgroundImage="rectBlue"/>
                                                 <connections>
@@ -396,7 +396,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVH-CW-Vkx">
-                                                <rect key="frame" x="0.0" y="170.33333333333331" width="353" height="35.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="176" width="353" height="38"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Ответ 3" backgroundImage="rectBlue"/>
                                                 <connections>
@@ -404,7 +404,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q40-L1-lSS">
-                                                <rect key="frame" x="0.0" y="255.66666666666663" width="353" height="35"/>
+                                                <rect key="frame" x="0.0" y="264" width="353" height="38"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Ответ 4" backgroundImage="rectBlue"/>
                                                 <connections>
@@ -412,7 +412,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIz-nv-vaj">
-                                                <rect key="frame" x="0.0" y="340.66666666666663" width="353" height="35.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="352" width="353" height="38"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Забрать деньги" backgroundImage="rectGreen"/>
                                                 <connections>
@@ -838,16 +838,16 @@
                                         <rect key="frame" x="0.0" y="253.33333333333331" width="393" height="252.33333333333331"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uDS-A4-DIz">
-                                                <rect key="frame" x="15" y="7" width="363" height="92.333333333333329"/>
+                                                <rect key="frame" x="15" y="7" width="363" height="82.333333333333329"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You losed on {attempt} attempt" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7U-lL-6a8">
-                                                        <rect key="frame" x="2" y="0.0" width="359" height="32.333333333333336"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш выйгрыш составил:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7U-lL-6a8">
+                                                        <rect key="frame" x="34.333333333333343" y="0.0" width="294.66666666666663" height="32.333333333333336"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyj-Nf-PjM">
-                                                        <rect key="frame" x="121.66666666666666" y="32.333333333333371" width="120" height="60"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyj-Nf-PjM">
+                                                        <rect key="frame" x="156.66666666666666" y="32.333333333333371" width="50" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                         <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
@@ -907,6 +907,7 @@
                     </view>
                     <connections>
                         <outlet property="attempts" destination="d7U-lL-6a8" id="Ci4-K0-HfW"/>
+                        <outlet property="moneyLabel" destination="zyj-Nf-PjM" id="fEx-Xs-s22"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ye1-Yc-5oj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
