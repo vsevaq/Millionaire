@@ -22,6 +22,8 @@ class LadderVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.popAction))
+        view.addGestureRecognizer(gesture)
         switch qNumberToFlash {
         case 1:
             q1Label.image = UIImage(named: "rectGreen")
@@ -62,5 +64,9 @@ class LadderVC: UIViewController {
         default:
             print("Нет ответа. Ошибка.")
         }
+    }
+    
+    @objc func popAction(sender : UITapGestureRecognizer) {
+        self.navigationController!.popViewController(animated: true)
     }
 }
