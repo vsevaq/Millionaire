@@ -7,18 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		184CF815299188D300124773 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CF814299188D300124773 /* NicknameViewController.swift */; };
 		184CF81929919CBD00124773 /* Countdown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 184CF81829919CBD00124773 /* Countdown.mp3 */; };
 		184CF81B29919CF200124773 /* Wrong answer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 184CF81A29919CF200124773 /* Wrong answer.mp3 */; };
 		184CF81D29919D2300124773 /* Answer accepted.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 184CF81C29919D2300124773 /* Answer accepted.mp3 */; };
 		184CF81F29919D2800124773 /* Right answer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 184CF81E29919D2800124773 /* Right answer.mp3 */; };
 		184CF82129919D5B00124773 /* Win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 184CF82029919D5B00124773 /* Win.mp3 */; };
-		1898BDD82991C21F006CE9DA /* WelcomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1898BDD72991C21F006CE9DA /* WelcomeViewController.storyboard */; };
-		1898BDDA2991C24E006CE9DA /* NicknameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1898BDD92991C24E006CE9DA /* NicknameViewController.storyboard */; };
-		1898BDDC2991C277006CE9DA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898BDDB2991C277006CE9DA /* WelcomeViewController.swift */; };
 		33278477298FE04E001760A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33278476298FE04E001760A3 /* AppDelegate.swift */; };
 		33278479298FE04E001760A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33278478298FE04E001760A3 /* SceneDelegate.swift */; };
-		3327847B298FE04E001760A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3327847A298FE04E001760A3 /* ViewController.swift */; };
 		33278480298FE050001760A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3327847F298FE050001760A3 /* Assets.xcassets */; };
 		33278483298FE050001760A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33278481298FE050001760A3 /* LaunchScreen.storyboard */; };
 		A10AAEC329942420005EF48A /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10AAEC029942420005EF48A /* GameVC.swift */; };
@@ -26,25 +21,18 @@
 		A10AAEC529942420005EF48A /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10AAEC229942420005EF48A /* GameEngine.swift */; };
 		A10AAECA299424CB005EF48A /* LadderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10AAEC9299424CB005EF48A /* LadderVC.swift */; };
 		A1B2F9432994E7D5001C7DED /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B2F9422994E7D5001C7DED /* Main2.storyboard */; };
-		A1E792FA29929CD400FED76C /* GameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1E792F929929CD400FED76C /* GameViewController.storyboard */; };
 		FD0CF8092992A69800013201 /* WinOrLoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0CF8082992A69800013201 /* WinOrLoseViewController.swift */; };
-		FD0CF80D2992A7B000013201 /* WinOrLoseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD0CF80C2992A7B000013201 /* WinOrLoseViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		184CF814299188D300124773 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		184CF81829919CBD00124773 /* Countdown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Countdown.mp3; sourceTree = "<group>"; };
 		184CF81A29919CF200124773 /* Wrong answer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Wrong answer.mp3"; sourceTree = "<group>"; };
 		184CF81C29919D2300124773 /* Answer accepted.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Answer accepted.mp3"; sourceTree = "<group>"; };
 		184CF81E29919D2800124773 /* Right answer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Right answer.mp3"; sourceTree = "<group>"; };
 		184CF82029919D5B00124773 /* Win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Win.mp3; sourceTree = "<group>"; };
-		1898BDD72991C21F006CE9DA /* WelcomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeViewController.storyboard; sourceTree = "<group>"; };
-		1898BDD92991C24E006CE9DA /* NicknameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NicknameViewController.storyboard; sourceTree = "<group>"; };
-		1898BDDB2991C277006CE9DA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		33278473298FE04E001760A3 /* Millionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millionaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33278476298FE04E001760A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33278478298FE04E001760A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3327847A298FE04E001760A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3327847F298FE050001760A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33278482298FE050001760A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33278484298FE050001760A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,9 +41,7 @@
 		A10AAEC229942420005EF48A /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		A10AAEC9299424CB005EF48A /* LadderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LadderVC.swift; sourceTree = "<group>"; };
 		A1B2F9422994E7D5001C7DED /* Main2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main2.storyboard; sourceTree = "<group>"; };
-		A1E792F929929CD400FED76C /* GameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameViewController.storyboard; sourceTree = "<group>"; };
 		FD0CF8082992A69800013201 /* WinOrLoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinOrLoseViewController.swift; sourceTree = "<group>"; };
-		FD0CF80C2992A7B000013201 /* WinOrLoseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WinOrLoseViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,18 +55,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		184CF81729919CAB00124773 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				184CF81829919CBD00124773 /* Countdown.mp3 */,
-				184CF81A29919CF200124773 /* Wrong answer.mp3 */,
-				184CF81C29919D2300124773 /* Answer accepted.mp3 */,
-				184CF81E29919D2800124773 /* Right answer.mp3 */,
-				184CF82029919D5B00124773 /* Win.mp3 */,
-			);
-			path = Sounds;
-			sourceTree = "<group>";
-		};
 		3327846A298FE04D001760A3 = {
 			isa = PBXGroup;
 			children = (
@@ -100,75 +74,80 @@
 		33278475298FE04E001760A3 /* Millionaire */ = {
 			isa = PBXGroup;
 			children = (
-				3327848D298FE0E8001760A3 /* Controllers */,
-				3327848C298FE0D5001760A3 /* Views */,
-				3327848A298FE0B6001760A3 /* Models */,
-				184CF81729919CAB00124773 /* Sounds */,
-				3327847F298FE050001760A3 /* Assets.xcassets */,
-				A1B2F9422994E7D5001C7DED /* Main2.storyboard */,
-				33278481298FE050001760A3 /* LaunchScreen.storyboard */,
-				33278484298FE050001760A3 /* Info.plist */,
-				3327848E298FE109001760A3 /* Supporting Files */,
+				A17A0E522998C3A40069967A /* Application */,
+				A17A0E542998C3F10069967A /* Screens */,
+				A17A0E532998C3E60069967A /* Resources */,
+				3327848C298FE0D5001760A3 /* Storyboards */,
 			);
 			path = Millionaire;
 			sourceTree = "<group>";
 		};
-		3327848A298FE0B6001760A3 /* Models */ = {
+		3327848C298FE0D5001760A3 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				A1B2F9422994E7D5001C7DED /* Main2.storyboard */,
+				33278481298FE050001760A3 /* LaunchScreen.storyboard */,
 			);
-			path = Models;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		3327848C298FE0D5001760A3 /* Views */ = {
+		A17A0E522998C3A40069967A /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				1898BDD72991C21F006CE9DA /* WelcomeViewController.storyboard */,
-				1898BDD92991C24E006CE9DA /* NicknameViewController.storyboard */,
-				A1E792F929929CD400FED76C /* GameViewController.storyboard */,
-				FD0CF80C2992A7B000013201 /* WinOrLoseViewController.storyboard */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		3327848D298FE0E8001760A3 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				A1E792FB29929EEB00FED76C /* GameMVC */,
-				A10AAEC8299424A3005EF48A /* LadderScreen */,
-				3327847A298FE04E001760A3 /* ViewController.swift */,
-				184CF814299188D300124773 /* NicknameViewController.swift */,
-				1898BDDB2991C277006CE9DA /* WelcomeViewController.swift */,
-				FD0CF8082992A69800013201 /* WinOrLoseViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		3327848E298FE109001760A3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				33278478298FE04E001760A3 /* SceneDelegate.swift */,
 				33278476298FE04E001760A3 /* AppDelegate.swift */,
+				33278478298FE04E001760A3 /* SceneDelegate.swift */,
+				33278484298FE050001760A3 /* Info.plist */,
 			);
-			path = "Supporting Files";
+			path = Application;
 			sourceTree = "<group>";
 		};
-		A10AAEC8299424A3005EF48A /* LadderScreen */ = {
+		A17A0E532998C3E60069967A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				184CF81829919CBD00124773 /* Countdown.mp3 */,
+				184CF81A29919CF200124773 /* Wrong answer.mp3 */,
+				184CF81E29919D2800124773 /* Right answer.mp3 */,
+				184CF81C29919D2300124773 /* Answer accepted.mp3 */,
+				184CF82029919D5B00124773 /* Win.mp3 */,
+				3327847F298FE050001760A3 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A17A0E542998C3F10069967A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A17A0E552998C7A20069967A /* Game */,
+				A17A0E562998C7A80069967A /* Ladder */,
+				A17A0E572998C7B30069967A /* WinOrLose */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A17A0E552998C7A20069967A /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				A10AAEC229942420005EF48A /* GameEngine.swift */,
+				A10AAEC029942420005EF48A /* GameVC.swift */,
+				A10AAEC129942420005EF48A /* GameModel.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		A17A0E562998C7A80069967A /* Ladder */ = {
 			isa = PBXGroup;
 			children = (
 				A10AAEC9299424CB005EF48A /* LadderVC.swift */,
 			);
-			path = LadderScreen;
+			path = Ladder;
 			sourceTree = "<group>";
 		};
-		A1E792FB29929EEB00FED76C /* GameMVC */ = {
+		A17A0E572998C7B30069967A /* WinOrLose */ = {
 			isa = PBXGroup;
 			children = (
-				A10AAEC229942420005EF48A /* GameEngine.swift */,
-				A10AAEC129942420005EF48A /* GameModel.swift */,
-				A10AAEC029942420005EF48A /* GameVC.swift */,
+				FD0CF8082992A69800013201 /* WinOrLoseViewController.swift */,
 			);
-			path = GameMVC;
+			path = WinOrLose;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,17 +209,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				184CF81929919CBD00124773 /* Countdown.mp3 in Resources */,
-				A1E792FA29929CD400FED76C /* GameViewController.storyboard in Resources */,
-				FD0CF80D2992A7B000013201 /* WinOrLoseViewController.storyboard in Resources */,
 				184CF81D29919D2300124773 /* Answer accepted.mp3 in Resources */,
 				184CF81F29919D2800124773 /* Right answer.mp3 in Resources */,
 				33278483298FE050001760A3 /* LaunchScreen.storyboard in Resources */,
 				184CF82129919D5B00124773 /* Win.mp3 in Resources */,
-				1898BDDA2991C24E006CE9DA /* NicknameViewController.storyboard in Resources */,
 				33278480298FE050001760A3 /* Assets.xcassets in Resources */,
 				184CF81B29919CF200124773 /* Wrong answer.mp3 in Resources */,
 				A1B2F9432994E7D5001C7DED /* Main2.storyboard in Resources */,
-				1898BDD82991C21F006CE9DA /* WelcomeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,11 +226,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184CF815299188D300124773 /* NicknameViewController.swift in Sources */,
 				FD0CF8092992A69800013201 /* WinOrLoseViewController.swift in Sources */,
 				A10AAECA299424CB005EF48A /* LadderVC.swift in Sources */,
-				1898BDDC2991C277006CE9DA /* WelcomeViewController.swift in Sources */,
-				3327847B298FE04E001760A3 /* ViewController.swift in Sources */,
 				A10AAEC329942420005EF48A /* GameVC.swift in Sources */,
 				A10AAEC429942420005EF48A /* GameModel.swift in Sources */,
 				33278477298FE04E001760A3 /* AppDelegate.swift in Sources */,
@@ -401,7 +373,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z262BFFWGC;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Millionaire/Info.plist;
+				INFOPLIST_FILE = Millionaire/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main2;
@@ -433,7 +405,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z262BFFWGC;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Millionaire/Info.plist;
+				INFOPLIST_FILE = Millionaire/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main2;
