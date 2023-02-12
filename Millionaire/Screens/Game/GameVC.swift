@@ -55,7 +55,7 @@ class GameVC: UIViewController {
         sender.setBackgroundImage(UIImage(named: "rectPurple"), for: .normal)
         engine.playSound(soundName: engine.answerAccepted!)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             if self.engine.checkAnswer(answer: "\(sender.currentTitle ?? "")") {
                 self.engine.winMoney = questionMoney[self.engine.qNumber - 1]!
                 
@@ -133,6 +133,7 @@ extension GameVC: CounterDelegate {
     func updateCounter(counter: Int) {
         if counter == 0 {
             checkGarantMoney()
+            engine.playSound(soundName: self.engine.wrongAnswer!)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.goToWinOrLoseViewController()
             }
