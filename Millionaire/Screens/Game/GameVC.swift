@@ -99,6 +99,7 @@ class GameVC: UIViewController {
     func goToWinOrLoseViewController() {
         let winOrLoseViewController = self.storyboard?.instantiateViewController(withIdentifier: "WinOrLoseViewController") as! WinOrLoseViewController
         winOrLoseViewController.winSumm = self.engine.winMoney
+        winOrLoseViewController.engine = self.engine
         self.navigationController?.pushViewController(winOrLoseViewController, animated: true)
     }
     
