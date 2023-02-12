@@ -35,6 +35,8 @@ class GameVC: UIViewController {
     }
     
     func updateUI() {
+        view.isUserInteractionEnabled = true
+        
         questionTextLabel.text = engine.currentQuestion?.qText
         questionNumberLabel.text = "Вопрос № \(String(engine.qNumber))"
         questionPriceLabel.text = "\(String(engine.score)) руб"
@@ -54,7 +56,7 @@ class GameVC: UIViewController {
         engine.stopTimer()
         sender.setBackgroundImage(UIImage(named: "rectPurple"), for: .normal)
         engine.playSound(soundName: engine.answerAccepted!)
-        
+        view.isUserInteractionEnabled = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             if self.engine.checkAnswer(answer: "\(sender.currentTitle ?? "")") {
                 self.engine.winMoney = questionMoney[self.engine.qNumber - 1]!
@@ -105,6 +107,7 @@ class GameVC: UIViewController {
     
     @IBAction func takeMoney(_ sender: Any) {
         engine.stopTimer()
+        view.isUserInteractionEnabled = false
         self.engine.playSound(soundName: self.engine.win!)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.goToWinOrLoseViewController()
